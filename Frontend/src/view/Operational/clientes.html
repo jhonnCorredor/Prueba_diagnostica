@@ -1,45 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clientes</title>
     <link rel="stylesheet" href="/src/assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
-    
+
     <legend>Clientes</legend>
-
-    <div class="formulario">
-        <legend>Registrar Cliente</legend>
-        <form action="">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre">
-            
-            <label for="apellido">Apellido</label>
-            <input type="text" id="apellido">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Realizar registro
+    </button>
     
-            <label for="t_identificacion">Tipo identificacion</label>
-            <input type="text" id="t_identificacion">
-            
-            <label for="identificacion">Identificacion</label>
-            <input type="text" id="identificacion">
-            
-            <label for="telefono">Teléfono</label>
-            <input type="text" id="telefono">
-            
-            <label for="direccion">Dirección</label>
-            <input type="text" id="direccion">
-            
-            <label for="ciudad">Ciudad</label>
-            <input type="text" id="ciudad">
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Registro Cliente</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                        <legend>Registrar Cliente</legend>
+                        <form action="">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre">
+                
+                            <label for="apellido">Apellido</label>
+                            <input type="text" id="apellido">
+                
+                            <label for="t_identificacion">Tipo identificacion</label>
+                            <input type="text" id="t_identificacion">
+                
+                            <label for="identificacion">Identificacion</label>
+                            <input type="text" id="identificacion">
+                
+                            <label for="telefono">Teléfono</label>
+                            <input type="text" id="telefono">
+                
+                            <label for="direccion">Dirección</label>
+                            <input type="text" id="direccion">
+                
+                            <label for="ciudad">Ciudad</label>
+                            <input type="text" id="ciudad">
+                        </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-            <button> Cerrar Registro</button>
-            <button name="btnAgregar">Registrar</button>
-        </form>
-    </div>
 
-    <button onclick="registro()">Realizar Registro</button>
 
     <div class="filtros">
         <label for="">Filtro por nombre</label>
@@ -75,7 +93,7 @@
         </tbody>
     </table>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/src/js/Operational/clientes.js"></script>
@@ -83,4 +101,5 @@
         loadData();
     </script>
 </body>
+
 </html>
