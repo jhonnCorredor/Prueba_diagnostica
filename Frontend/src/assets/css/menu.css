@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+}
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100%;
+    background-color: #361616;
+    color: #fff;
+    padding: 20px;
+}
+
+.menu-lateral h4 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.menu-lateral hr {
+    border-color: #fff;
+    margin-bottom: 30px;
+}
+
+.views {
+    display: flex;
+    flex-direction: column;
+}
+
+.views button {
+    background-color: transparent;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.views button:hover {
+    background-color: #555;
+}
+
+.iframeContainer {
+    margin-left: 200px;
+    padding: 5px;
+}
+
+.iframe {
+    
+    width: 100%;
+    height: 100vh;
+}

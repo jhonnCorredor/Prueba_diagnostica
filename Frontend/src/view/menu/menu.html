@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoes store</title>
+    <link rel="stylesheet" href="/src/assets/css/menu.css">
+</head>
+<body>
+
+    <div class="menu-lateral">
+        <h4>Shoes store</h4>
+        <hr>
+        <div class="views">
+            <button onclick="vistaCliente()"> clientes</button>
+            <button onclick="vistaProducto()"> Productos</button>
+            <button onclick="vistaVenta()"> Ventas</button>
+        </div>
+    </div>
+
+    <div class="iframeContainer">
+        <iframe src="./index.html" frameborder="0" id="contentFrame" class="iframe">
+
+        </iframe>
+    </div>
+    
+    <script src="/src/js/menu.js"></script>
+</body>
+</html>

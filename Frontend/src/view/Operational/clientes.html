@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+    <link rel="stylesheet" href="/src/assets/css/style.css">
+</head>
+<body>
+    
+    <legend>Clientes</legend>
+
+    <div class="formulario">
+        <legend>Registrar Cliente</legend>
+        <form action="">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre">
+            
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido">
+    
+            <label for="t_identificacion">Tipo identificacion</label>
+            <input type="text" id="t_identificacion">
+            
+            <label for="identificacion">Identificacion</label>
+            <input type="text" id="identificacion">
+            
+            <label for="telefono">Teléfono</label>
+            <input type="text" id="telefono">
+            
+            <label for="direccion">Dirección</label>
+            <input type="text" id="direccion">
+            
+            <label for="ciudad">Ciudad</label>
+            <input type="text" id="ciudad">
+
+            <button> Cerrar Registro</button>
+            <button name="btnAgregar">Registrar</button>
+        </form>
+    </div>
+
+    <button onclick="registro()">Realizar Registro</button>
+
+    <div class="filtros">
+        <label for="">Filtro por nombre</label>
+        <input type="text">
+
+        <label for="">Filtro por ciudad</label>
+        <input type="text">
+
+        <label for="">Filtro por estado</label>
+        <input type="text">
+
+        <button> Filtrar</button>
+        <button> Limpiar Filtros</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Tipo identificacion</th>
+                <th>Identificacion</th>
+                <th>Teléfono</th>
+                <th>Dirección</th>
+                <th>Ciudad</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+
+        <tbody id="resultData">
+
+        </tbody>
+    </table>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/src/js/Operational/clientes.js"></script>
+    <script>
+        loadData();
+    </script>
+</body>
+</html>
