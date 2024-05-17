@@ -1,4 +1,5 @@
 package com.sena.prueba.Entity;
+import java.time.LocalDateTime;
 import java.util.Date;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -19,7 +20,7 @@ public class Ventas extends ABaseEntity{
 	private String total;
 	
 	@Column(name="fecha_venta", nullable= false)
-	private Date fecha_venta;
+	private LocalDateTime fecha_venta;
 	
 	public Clientes getCliente_id_cliente() {
 		return cliente_id_cliente;
@@ -37,11 +38,11 @@ public class Ventas extends ABaseEntity{
 		this.total = total;
 	}
 
-	public Date getFecha_venta() {
+	public LocalDateTime getFecha_venta() {
 		return fecha_venta;
 	}
 
-	public void setFecha_venta(Date fecha_venta) {
+	public void setFecha_venta(LocalDateTime fecha_venta) {
 		this.fecha_venta = fecha_venta;
 	}
 

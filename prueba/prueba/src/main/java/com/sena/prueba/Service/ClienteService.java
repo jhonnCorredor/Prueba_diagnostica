@@ -17,4 +17,8 @@ public class ClienteService extends ABaseService<Clientes> implements IClientesS
 		return repository;
 	}
 
+	@Override
+	public Long numClientes() {
+		return repository.numClientes();
+	}
 }

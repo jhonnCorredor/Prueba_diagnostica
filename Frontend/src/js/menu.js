@@ -13,3 +13,7 @@ function vistaVenta() {
     iframe.src= '/src/view/Operational/ventas.html'
 }
 
+function Dashboard() {
+    var iframe = document.getElementById("contentFrame");
+    iframe.src= '/src/view/menu/index.html';
+}

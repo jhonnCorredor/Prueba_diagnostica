@@ -7,7 +7,7 @@ import jakarta.persistence.Table;
 @Table(name="productos")
 public class Productos extends ABaseEntity{
 	
-	@Column(name="nombre_prodcuto", length=45, nullable=false)
+	@Column(name="nombre_producto", length=45, nullable=false)
 	private String nombre_producto;
 	
 	@Column(name="descripcion", length=45, nullable=false)

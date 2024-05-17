@@ -7,6 +7,7 @@
     <title>Clientes</title>
     <link rel="stylesheet" href="/src/assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -16,7 +17,6 @@
         Realizar registro
     </button>
     
-    <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -25,33 +25,59 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                        <legend>Registrar Cliente</legend>
                         <form action="">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" id="nombre">
+                            <input type="hidden" id="id">
+                            <div>
+                                <label for="nombre">Nombre</label>
+                                <input type="text" id="nombre">
+                            </div>
                 
-                            <label for="apellido">Apellido</label>
-                            <input type="text" id="apellido">
+                            <div>
+                                <label for="apellido">Apellido</label>
+                                <input type="text" id="apellido">
+                            </div>
                 
-                            <label for="t_identificacion">Tipo identificacion</label>
-                            <input type="text" id="t_identificacion">
+                            <div>
+                                <label for="t_identificacion">Tipo identificacion</label>
+                                <select name="" id="t_identificacion">
+                                    <option value="CC">CC</option>
+                                    <option value="TI">TI</option>
+                                    <option value="CEX">CEX</option>
+                                </select>
+                            </div>
                 
-                            <label for="identificacion">Identificacion</label>
-                            <input type="text" id="identificacion">
+                            <div>
+                                <label for="identificacion">Identificacion</label>
+                                <input type="text" id="identificacion">
+                            </div>
                 
-                            <label for="telefono">Teléfono</label>
-                            <input type="text" id="telefono">
+                            <div>
+                                <label for="telefono">Teléfono</label>
+                                <input type="text" id="telefono">
+                            </div>
                 
-                            <label for="direccion">Dirección</label>
-                            <input type="text" id="direccion">
+                            <div>
+                                <label for="direccion">Dirección</label>
+                                <input type="text" id="direccion">
+                            </div>
                 
-                            <label for="ciudad">Ciudad</label>
-                            <input type="text" id="ciudad">
+                            <div>
+                                <label for="ciudad">Ciudad</label>
+                                <input type="text" id="ciudad"> 
+                            </div>
+
+                            <div>
+                                <label for="estado">Estado</label>
+                                <select name="estado" id="estado">
+                                    <option value="1">ACTIVO</option>
+                                    <option value="0">INACTIVO</option>
+                                </select>
+                            </div>
                         </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" name="buttonPrimary" onclick="save()" class="btn btn-primary">Save</button>
             </div>
           </div>
         </div>
@@ -59,7 +85,7 @@
 
 
 
-    <div class="filtros">
+    <!-- <div class="filtros">
         <label for="">Filtro por nombre</label>
         <input type="text">
 
@@ -70,12 +96,12 @@
         <input type="text">
 
         <button> Filtrar</button>
-        <button> Limpiar Filtros</button>
-    </div>
+        <button onclick="loadData()"> Limpiar Filtros</button>
+    </div> -->
 
-    <table>
-        <thead>
-            <tr>
+    <table class="table table-striped">
+        <thead >
+            <tr class="table-dark">
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Tipo identificacion</th>
@@ -88,14 +114,14 @@
             </tr>
         </thead>
 
-        <tbody id="resultData">
+        <tbody class="table-group-divider" id="resultData">
 
         </tbody>
     </table>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="/src/js/Operational/clientes.js"></script>
     <script>
         loadData();

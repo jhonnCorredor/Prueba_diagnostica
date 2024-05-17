@@ -32,3 +32,95 @@ button[name="btnAgregar"] {
 button[name="btnAgregar"]:focus + .formulario {
     display: block;
 }
+
+.modal-body{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.modal-body form{
+    width: 100%;
+}
+
+.modal-body div{
+    padding: 6px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-body label {
+	font-weight: bold;
+    color: #2c2a2a;
+    margin-top: 15px;
+  }
+  .modal-body select,
+  .modal-body input,
+  .modal-body textarea {
+    width: 60%;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+  }
+
+.acciones{
+    border: none;
+    cursor: pointer;
+    color: aqua;
+    background: none;
+    border-radius: 5px;
+}
+
+.dashboard {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .dashboard h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .cuadros {
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .cuadro {
+    width: 30%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(2, 2, 2, 0.582);
+    padding: 5px;
+    text-align: center;
+    border-radius: 20px;
+  }
+  
+  .cuadro h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .cuadro h6 {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  
+
+  .cuadro-cliente{
+    background-color: rgb(23, 145, 161);
+  }
+
+  .cuadro-productos{
+    background-color: rgb(197, 18, 18);
+  }
+
+  .cuadro-ventas{
+    background-color: rgb(23, 161, 57);
+  }
+
+

@@ -4,6 +4,9 @@ import org.springframework.stereotype.Repository;
 import com.sena.prueba.Entity.ABaseEntity;
 
 @Repository
-public interface IBaseRepository<T extends ABaseEntity, ID> extends JpaRepository<T, ID>{
+public interface IBaseRepository<T extends ABaseEntity, ID> extends JpaRepository<T, Long>{
+
+	
+	
 
 }

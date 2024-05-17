@@ -8,7 +8,7 @@ body {
     left: 0;
     width: 150px;
     height: 100%;
-    background-color: #361616;
+    background-color: #292828;
     color: #fff;
     padding: 20px;
 }
@@ -16,6 +16,11 @@ body {
 .menu-lateral h4 {
     margin-bottom: 20px;
     text-align: center;
+}
+.menu-lateral h4 button {
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .menu-lateral hr {
