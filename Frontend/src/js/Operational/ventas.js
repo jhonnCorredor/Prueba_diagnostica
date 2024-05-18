@@ -1,3 +1,16 @@
+$(document).ready(function() {
+    $('#miTabla').DataTable({
+        "paging": true, 
+        "pageLength": 10, 
+        "lengthChange": false, 
+        "ordering": false, 
+        "searching": false,
+        "info": true, 
+        "autoWidth": false, 
+        "responsive": true 
+    });
+});
+
 function loadData() {
     $.ajax({
       url: "http://localhost:9000/prueba-diagnostica/v1/api/ventas",
@@ -13,7 +26,7 @@ function loadData() {
                   <td> ${item.total} </td>
                   <td> ${item.fecha_venta} </td>
                   <td> ${item.estado == true ? "PAGADO" : "PENDIENTE PAGAR"} </td>
-                  <td> <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary" onclick=""> Detalle</button></td>
+                  <td> <button class="btn btn-primary" onclick="detalleVenta(${item.id})"> Detalle</button></td>
                   </tr>`;
         });
   
@@ -24,3 +37,10 @@ function loadData() {
       },
     });
   }
+
+  function detalleVenta(ventaId) {
+    if (ventaId != null && ventaId != undefined && ventaId !== "") {
+        localStorage.setItem("ventaId", ventaId);
+    }
+    parent.document.getElementById('contentFrame').src = `/src/view/Operational/detalleVenta.html`;
+}
